@@ -628,6 +628,7 @@ C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\Blazo
 C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\BlazorApp.Client.AssemblyInfo.cs
 C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\BlazorApp.Client.csproj.CoreCompileInputs.cache
 C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\BlazorApp.Client.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\BlazorApp.Client.sourcelink.json
 C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\webcil\FluentValidation.wasm
 C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Authorization.wasm
 C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.wasm
@@ -1031,6 +1032,8 @@ C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\compr
 C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\compressed\tnt9r9yop9-tptq2av103.gz
 C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\compressed\jm9nb49abk-lfu7j35m59.gz
 C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\compressed\ao4c29vnn4-oyz0vx2fzb.gz
+C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\compressed\4vunzfikvp-rv69jp812d.gz
+C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\compressed\5zvbazqpur-1rdcubasgo.gz
 C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\staticwebassets.build.endpoints.json
@@ -1045,9 +1048,6 @@ C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\Blazo
 C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\refint\BlazorApp.Client.dll
 C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\BlazorApp.Client.pdb
 C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\ref\BlazorApp.Client.dll
-C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\compressed\4vunzfikvp-qr8dvefqyi.gz
-C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\compressed\5zvbazqpur-bqqdwkhb7g.gz
-C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\compressed\p16r1lo9cc-yalstcaso6.gz
-C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\compressed\m9lwyok78y-tsczlhgezm.gz
-C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\compressed\63dvynpkij-4q563j4j4j.gz
-C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\compressed\p16r1lo9cc-chtb58u9h7.gz
+C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\compressed\m9lwyok78y-xj0m5bruia.gz
+C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Client\obj\Debug\net8.0\compressed\63dvynpkij-23g0isdvse.gz

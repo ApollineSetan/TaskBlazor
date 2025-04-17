@@ -12,5 +12,8 @@ namespace BlazorApp.Shared.Models
 
         [StringLength(500)]
         public string Description { get; set; }
+
+        [Required]
+        public DateTime DueDate { get; set; }
     }
 }

@@ -4,26 +4,36 @@
 @using BlazorApp.Shared.Models
 
 
-<h3>Ajouter un nouvel Item</h3>
+<h3>Ajouter une nouvelle tâche</h3>
 
 <EditForm Model="@item" OnValidSubmit="HandleValidSubmit">
     <FluentValidationValidator />
     <ValidationSummary />
 
     <div class="mb-3">
-        <label>Nom:</label>
+        <label>Nom :</label>
         <InputText @bind-Value="item.Name" class="form-control" />
     </div>
     <div class="mb-3">
-        <label>Description:</label>
-        <InputText @bind-Value="item.Description" class="form-control" />
+        <label>Description :</label>
+        <InputTextArea @bind-Value="item.Description" class="form-control" rows="5" />
     </div>
+    <div>
+        <label>Date d'échéance :</label>
+        <InputDate @bind-Value="item.DueDate" class="form-control" />
+    </div>
+    <br />
 
     <button type="submit" class="btn btn-primary">Ajouter</button>
 </EditForm>
 
 @code {
     private Item item = new();
+
+    protected override void OnInitialized()
+    {
+        item.DueDate = DateTime.Today;
+    }
 
     private async Task HandleValidSubmit()
     {

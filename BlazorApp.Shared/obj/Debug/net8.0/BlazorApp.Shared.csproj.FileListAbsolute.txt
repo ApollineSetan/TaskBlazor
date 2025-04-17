@@ -6,6 +6,7 @@ C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Shared\obj\Debug\net8.0\Blazo
 C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Shared\obj\Debug\net8.0\BlazorApp.Shared.AssemblyInfoInputs.cache
 C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Shared\obj\Debug\net8.0\BlazorApp.Shared.AssemblyInfo.cs
 C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Shared\obj\Debug\net8.0\BlazorApp.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Shared\obj\Debug\net8.0\BlazorApp.Shared.sourcelink.json
 C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Shared\obj\Debug\net8.0\BlazorApp.Shared.dll
 C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Shared\obj\Debug\net8.0\refint\BlazorApp.Shared.dll
 C:\Users\Apolline\source\repos\BlazorApp\BlazorApp.Shared\obj\Debug\net8.0\BlazorApp.Shared.pdb

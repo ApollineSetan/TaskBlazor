@@ -1,4 +1,4 @@
-﻿@page "/items"
+﻿@page "/"
 @inject ItemService ItemService
 @using BlazorApp.Client.Services
 @using BlazorApp.Shared.Models
@@ -13,20 +13,33 @@
 }
 else if (!items.Any())
 {
-    <p>Aucune tâche trouvé.</p>
+    <p>Aucune tâche trouvée.</p>
 }
 else
 {
-    <ul>
+    <div class="row">
         @foreach (var item in items)
         {
-            <li>
-            <strong>@item.Name</strong> : @item.Description
-            <button @onclick="() => EditItem(item)">Modifier</button>
-            <button @onclick="() => DeleteItem(item.Id)">Supprimer</button>
-            </li>
+            <div class="col-md-4 mb-4">
+                <div class="card @(item.DueDate < DateTime.Today ? "bg-soft-red" : "")">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Name</h5>
+                        <p class="card-text">@item.Description</p>
+                        <p class="card-text">
+                            <em>
+                                A faire avant le @item.DueDate.ToString("dd/MM/yyyy")
+                                @(item.DueDate < DateTime.Today ? " ⚠️" : "")
+                            </em>
+                        </p>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-primary" @onclick="() => EditItem(item)">Modifier</button>
+                            <button class="btn btn-danger" @onclick="() => DeleteItem(item.Id)">Supprimer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         }
-    </ul>
+    </div>
 }
 
 @code {

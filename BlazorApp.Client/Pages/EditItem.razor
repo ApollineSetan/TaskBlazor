@@ -5,24 +5,36 @@
 @using BlazorApp.Client.Services
 @using Microsoft.AspNetCore.Components
 
-<h3>Modifier l'élément</h3>
+<h3>Modifier la tâche</h3>
+<br />
 
-<EditForm Model="@item" OnValidSubmit="HandleValidSubmit">
-    <DataAnnotationsValidator />
-    <ValidationSummary />
+<div class="card">
+    <div class="card-body">
 
-    <div>
-        <label for="Name">Nom</label>
-        <InputText id="Name" @bind-Value="item.Name" />
+        <EditForm Model="@item" OnValidSubmit="HandleValidSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="mb-3">
+                <label for="Name" class="form-label">Nom</label>
+                <InputText id="Name" class="form-control" @bind-Value="item.Name" />
+            </div>
+
+            <div class="mb-3">
+                <label for="Description" class="form-label">Description</label>
+                <InputTextArea id="Description" @bind-Value="item.Description" class="form-control" rows="5" />
+            </div>
+
+            <div class="mb-3">
+                <label for="DueDate" class="form-label">Date d'échéance</label>
+                <InputDate id="DueDate" class="form-control" @bind-Value="item.DueDate" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Sauvegarder</button>
+            <button type="button" class="btn btn-secondary" @onclick="CancelEdit">Annuler</button>
+        </EditForm>
     </div>
-
-    <div>
-        <label for="Description">Description</label>
-        <InputText id="Description" @bind-Value="item.Description" />
-    </div>
-
-    <button type="submit">Sauvegarder</button>
-</EditForm>
+</div>
 
 @code {
     [Parameter] public int Id { get; set; }
@@ -36,6 +48,11 @@
     private async Task HandleValidSubmit()
     {
         await ItemService.UpdateItemAsync(item);
-        NavigationManager.NavigateTo("/items");
+        NavigationManager.NavigateTo("/");
+    }
+
+    private void CancelEdit()
+    {
+        NavigationManager.NavigateTo("/");
     }
 }

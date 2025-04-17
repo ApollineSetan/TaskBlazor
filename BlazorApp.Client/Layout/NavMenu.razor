@@ -1,2 +1,29 @@
-﻿<NavLink href="/items">Liste des items</NavLink>
-<NavLink href="/add">Ajouter un item</NavLink>
+﻿@inherits LayoutComponentBase
+
+<div class="navmenu">
+    <nav>
+        <ul class="nav-list">
+            <li class="nav-item">
+                <NavLink class="nav-link" href="/">
+                    <i class="fas fa-list"></i> Liste des tâches
+                </NavLink>
+            </li>
+            <li class="nav-item">
+                <NavLink class="nav-link" href="/add">
+                    <i class="fas fa-plus-circle"></i> Ajouter une tâche
+                </NavLink>
+            </li>
+        </ul>
+    </nav>
+
+    @if (ChildContent != null)
+    {
+        <div class="nav-content">
+            @ChildContent
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter] public RenderFragment ChildContent { get; set; }
+}

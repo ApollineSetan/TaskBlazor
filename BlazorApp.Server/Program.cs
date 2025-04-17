@@ -1,13 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using BlazorApp.Server.Data;
-using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.WebAssembly.Server;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Ajouter CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigin", policy =>
@@ -34,6 +34,13 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseBlazorFrameworkFiles();
+app.UseStaticFiles();
+
+app.UseRouting();
+
 app.MapControllers();
+
+app.MapFallbackToFile("index.html");
 
 app.Run();

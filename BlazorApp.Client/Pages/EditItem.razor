@@ -1,0 +1,41 @@
+﻿@page "/edit-item/{Id:int}"
+@inject NavigationManager NavigationManager
+@inject ItemService ItemService
+@using BlazorApp.Shared.Models
+@using BlazorApp.Client.Services
+@using Microsoft.AspNetCore.Components
+
+<h3>Modifier l'élément</h3>
+
+<EditForm Model="@item" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div>
+        <label for="Name">Nom</label>
+        <InputText id="Name" @bind-Value="item.Name" />
+    </div>
+
+    <div>
+        <label for="Description">Description</label>
+        <InputText id="Description" @bind-Value="item.Description" />
+    </div>
+
+    <button type="submit">Sauvegarder</button>
+</EditForm>
+
+@code {
+    [Parameter] public int Id { get; set; }
+    private Item item = new Item();
+
+    protected override async Task OnInitializedAsync()
+    {
+        item = await ItemService.GetItemAsync(Id);
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        await ItemService.UpdateItemAsync(item);
+        NavigationManager.NavigateTo("/items");
+    }
+}

@@ -1,0 +1,33 @@
+﻿@page "/add"
+@inject ItemService ItemService
+@using BlazorApp.Client.Services
+@using BlazorApp.Shared.Models
+
+
+<h3>Ajouter un nouvel Item</h3>
+
+<EditForm Model="@item" OnValidSubmit="HandleValidSubmit">
+    <FluentValidationValidator />
+    <ValidationSummary />
+
+    <div class="mb-3">
+        <label>Nom:</label>
+        <InputText @bind-Value="item.Name" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Description:</label>
+        <InputText @bind-Value="item.Description" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ajouter</button>
+</EditForm>
+
+@code {
+    private Item item = new();
+
+    private async Task HandleValidSubmit()
+    {
+        await ItemService.AddItemAsync(item);
+        item = new();
+    }
+}

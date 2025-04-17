@@ -1,0 +1,50 @@
+﻿@page "/items"
+@inject ItemService ItemService
+@using BlazorApp.Client.Services
+@using BlazorApp.Shared.Models
+@using Microsoft.AspNetCore.Components
+@inject NavigationManager NavigationManager
+
+<h3>Liste des tâches</h3>
+
+@if (items == null)
+{
+    <p>Chargement...</p>
+}
+else if (!items.Any())
+{
+    <p>Aucune tâche trouvé.</p>
+}
+else
+{
+    <ul>
+        @foreach (var item in items)
+        {
+            <li>
+            <strong>@item.Name</strong> : @item.Description
+            <button @onclick="() => EditItem(item)">Modifier</button>
+            <button @onclick="() => DeleteItem(item.Id)">Supprimer</button>
+            </li>
+        }
+    </ul>
+}
+
+@code {
+    private List<Item>? items;
+
+    protected override async Task OnInitializedAsync()
+    {
+        items = await ItemService.GetItemsAsync();
+    }
+
+    private async Task DeleteItem(int itemId)
+    {
+        await ItemService.DeleteItemAsync(itemId);
+        items = await ItemService.GetItemsAsync();
+    }
+
+    private void EditItem(Item item)
+    {
+        NavigationManager.NavigateTo($"/edit-item/{item.Id}");
+    }
+}
